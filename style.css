@@ -41,24 +41,14 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.topic-button:hover {
+.topic-button:hover, .topic-button-b:hover {
     background-color: blue;
     color: black;
 }
 
-.topic-button-b:hover {
-    background-color: blue;
+.topic-button.selected, .topic-button-b.selected {
+    background-color: white;
     color: black;
-}
-
-.topic-button.selected {
-    background-color: white; /* Nền trắng khi được chọn */
-    color: black; /* Chữ đen khi được chọn */
-}
-
-.topic-button-b.selected {
-    background-color: white; /* Nền trắng khi được chọn */
-    color: black; /* Chữ đen khi được chọn */
 }
 
 .section-a {
@@ -72,7 +62,7 @@ body {
 
 .section-a1 {
     width: 100%;
-    height: auto; /* Chiều cao sẽ được cập nhật từ JavaScript */
+    height: auto; 
     position: relative;
     overflow: visible;
 }
@@ -98,7 +88,7 @@ body {
 .frame {
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid #b22222;
-    border-radius: 10px; /* Bo tròn góc */
+    border-radius: 10px;
     margin-top: 5px;
     transition: transform 0.2s, border-color 0.2s;
 }
@@ -109,84 +99,87 @@ body {
 }
 
 .section-1 {
-    display: flex; /* Cố định 1 hàng ngang */
-    flex-direction: row; /* Hàng ngang */
-    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .section-1-a {
-    width: 40%; /* Đặt chiều rộng tự động để tương ứng với chiều rộng của khung hình S1 */
-    height: calc(100% + 10px); /* Chiều cao bằng chiều cao của 0.jpg đã scale + 10px */
-    background-color: #2c2a29; /* Màu nền nâu đen */
-    border: 2px solid yellow; /* Viền màu vàng */
+    width: 100%;
+    height: calc(100% + 10px);
+    background-color: #2c2a29;
+    border: 2px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
+.section-1b-2 {
+    width: 100%;
+    flex-direction: row;
+    
+}
 
 .section-1-b {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    height: calc(100% + 10px); /* Đảm bảo chiều cao bằng với section 1-a */
-    border: 2px solid yellow; /* Viền màu vàng */
-    background-color: #2c2a29; /* Màu nền nâu đen */
+    height: calc(100% + 10px);
+    border: 2px solid yellow;
+    background-color: #2c2a29;
 }
 
 .section-1-b-1, h3, p { 
     width: 100%;
-    color: white; /* Màu chữ trắng */
-    border: 2px solid #ff00ae; /* Viền cho các phần này */
-    padding: 10px; /* Thêm khoảng cách bên trong */
+    color: white;
+    border: 2px solid #ff00ae;
+    padding: 11px;
 }
 
 .section-1-b-2 {
     width: 100%;
-    color: white; /* Màu chữ trắng */
-    border: 2px solid #ff00ae; /* Viền cho các phần này */
-    padding: 10px; /* Thêm khoảng cách bên trong */
+    color: white;
+    border: 2px solid #ff00ae;
+    padding: 1px;
 }
 
-/* Khung hình S1 */
 .khung-hinh-s1 {
-    height: calc(100% - 10px); /* Chiều cao bằng chiều cao của 0.jpg đã scale */
-    border: 2px solid #b22222; /* Viền màu vàng */
-    border-radius: 10px; /* Bo tròn góc */
-    width: 100%; /* Chiều rộng sẽ được cập nhật từ JavaScript */
-    background-image: url('images/0.jpg'); /* Đặt hình nền cho khung hình S1 */
-    background-size: cover; /* Đảm bảo hình nền vừa khít */
+    height: calc(100% - 10px);
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    width: 100%; 
+    background-image: url('images/0.jpg');
+    background-size: cover;
+    flex-direction: row;
 }
 
-/* Popup */
 .popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; /* Điều chỉnh kích thước theo nhu cầu */
+    width: 80%;
     max-width: 400px;
-    height: auto; /* Tự động chiều cao */
-    border-radius: 10px; /* Bo tròn góc */
-    border: 2px solid yellow; /* Viền màu vàng */
-    display: none; /* Ẩn popup ban đầu */
-    background-color: rgba(255, 255, 255, 0.9); /* Nền trắng mờ */
-    z-index: 1000; /* Đảm bảo popup ở trên cùng */
-    transition: transform 0.5s, opacity 0.5s; /* Hiệu ứng mờ dần */
-    opacity: 0; /* Khởi tạo mờ */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
 .popup img {
-    width: 100%; /* Đảm bảo hình ảnh chiếm đầy popup */
-    border-radius: 10px; /* Bo tròn góc cho hình ảnh */
+    width: 100%;
+    border-radius: 10px;
 }
 
 .popup.show {
-    display: block; /* Hiện popup */
-    opacity: 1; /* Hiện đầy đủ */
+    display: block;
+    opacity: 1;
 }
 
-/* Section mean */
 .section-mean {
     display: flex;
     flex-direction: column;
@@ -195,9 +188,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid orange;
     box-sizing: border-box;
-    align-items: center;
     justify-content: center;
-    color: white; /* Màu chữ */
+    color: white;
 }
 
 .section-mean-1, .section-mean-2 {
@@ -212,17 +204,21 @@ body {
 }
 
 .section-mean-1 {
-    text-align: center; /* Căn giữa nội dung */
-    margin-bottom: 20px; /* Khoảng cách dưới */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .section-mean-2 {
-    background-color: black; /* Nền trắng */
-    color: white; /* Màu chữ đen */
-    padding: 20px; /* Khoảng cách bên trong */
-    border-radius: 5px; /* Bo góc */
-    border: 1px solid #ccc; /* Viền mỏng */
-    display: none; /* Ẩn mặc định */
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    text-align: center; /* Canh giữa văn bản */
+    padding: 20px; /* Thêm một chút padding nếu cần */
 }
 
 .view-meaning-button {
@@ -231,16 +227,15 @@ body {
 }
 
 .view-meaning-button:hover {
-    background-color: darkred; /* Màu khi hover */
+    background-color: darkred;
 }
 
 .view-meaning-button.active {
-    background-color: darkred; /* Màu sau khi click */
-    color: white; /* Màu chữ sau khi click */
-    border: 2px solid white; /* Giữ viền trắng */
+    background-color: darkred;
+    color: white;
+    border: 2px solid white;
 }
 
-/* Responsive cho mobile */
 @media (max-width: 768px) {
     .topic-menu {
         display: none;
@@ -268,20 +263,22 @@ body {
     }
 
     .section-1-a, .section-1-b {
-        width: 100%; /* Đặt chiều rộng 100% cho di động */
+        width: 100%;
     }
+
     .popup {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Màu nền bán trong suốt */
+        background: rgba(0, 0, 0, 0.5);
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1000; /* Đặt lên trên cùng */
+        z-index: 1000;
     }
+
     .section-gpt {
         display: flex;
         flex-direction: column;
