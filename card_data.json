@@ -1,0 +1,12 @@
+{
+  "Công việc": {
+    "1": "Meaning of card 1 (upright)",
+    "2": "Meaning of card 2 (upright)",
+    // ...
+  },
+  "Tài chính": {
+    "1": "Meaning of card 1 (upright)",
+    // ...
+  },
+  // ... other topics
+}
