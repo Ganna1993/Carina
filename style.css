@@ -114,6 +114,40 @@ body {
     align-items: center;
     position: relative;
 }
+.khung-bài{
+    width: 100%;
+    height: calc(100% + 10px);
+    background-color: #2c2a29;
+    border: 2px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.khung-hinh-s1 {
+    height: calc(100% - 10px);
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    width: 40%; 
+    background-image: url('images/0.jpg');
+    background-size: cover;
+    flex-direction: row;
+    display: flex;
+}
+.khung-text-s1 {
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    text-align: center; /* Căn giữa nội dung text */
+    padding: 20px; /* Thêm khoảng cách bên trong để text không sát viền */
+}
+
+
 .section-1b-2 {
     width: 100%;
     flex-direction: row;
@@ -124,7 +158,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: calc(100% + 10px);
+    height: auto;
     border: 2px solid yellow;
     background-color: #2c2a29;
 }
@@ -143,15 +177,156 @@ body {
     padding: 1px;
 }
 
-.khung-hinh-s1 {
+.section-1b-3{
+    border: 2px solid orange; 
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+/* Section 2 - Trải bài 3 lá      */
+.section-2 {
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+    padding: 20px; /* Padding bên trong */
+    background-color: #222; /* Màu nền của section */
+    color: white; /* Màu chữ */
+    border: 2px solid #b22222;
+}
+.section-3, .section-5 {
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+    padding: 20px; /* Padding bên trong */
+    background-color: #222; /* Màu nền của section */
+    color: white; /* Màu chữ */
+    border: 2px solid #b22222;
+    height: 500px;
+}
+
+.section-4{
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+    padding: 20px; /* Padding bên trong */
+    background-color: #222; /* Màu nền của section */
+    color: white; /* Màu chữ */
+    border: 2px solid #b22222;
+    height: 500px;
+}
+
+
+.section-2-a {
+    display: flex; /* Sử dụng flexbox để chia đều các khung bài */
+    justify-content: space-between; /* Căn giữa các khung bài */
+    width: 100%;
+    border: 2px solid #b22222;
+    
+}
+
+.khung-bài-2,
+.khung-bài-3,
+.khung-bài-4 {
+    flex: 1; /* Mỗi khung bài chiếm đều không gian */
+    margin: 10px; /* Khoảng cách giữa các khung bài */
+    padding: 20px;
+    border: 2px solid orange; /* Viền khung bài */
+    border-radius: 5px; /* Bo góc */
+    position: relative; /* Để dễ dàng đặt các phần tử bên trong */
+    text-align: center; /* Căn giữa nội dung trong khung */
+    background-color: #333; /* Màu nền của khung bài */
+    width: 33%;
+}
+
+.khung-hinh-s2,
+.khung-hinh-s3,
+.khung-hinh-s4 {
+    width: 100%; /* Đảm bảo chiều rộng đầy đủ */
+    height: 150px; /* Chiều cao khung hình */
+    background-image: url('images/0.jpg'); /* Màu nền khung hình */
+    border-radius: 5px; /* Bo góc */
+    margin-bottom: 10px; /* Khoảng cách giữa khung hình và nội dung */
+}
+
+.khung-text-s2,
+.khung-text-s3,
+.khung-text-s4 {
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+}
+
+.section-2-b {
+    margin-left: 20px; /* Khoảng cách trái cho phần thông tin */
+    width: 100%;
+    clear: both;
+    border: 2px solid #b22222;
+}
+
+.section-2b-1 h3,
+.section-2b-1 p {
+    margin: 10px 0; /* Khoảng cách cho các phần tử văn bản */
+}
+
+.view-meaning-button-1, .view-meaning-button-2 {
+    display: block; /* Hiển thị nút như một khối */
+    margin: 0 auto; /* Căn giữa nút */
+    padding: 10px 20px; /* Khoảng cách cho nút */
+    background-color: black; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    border: 2px solid white; /* Viền nút */
+    border-radius: 5px; /* Bo góc nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.view-meaning-button-1:hover {
+    background-color: white; /* Màu nền khi hover */
+    color: black; /* Màu chữ khi hover */
+}
+/* Section 2 - Trải bài 3 lá -end     */
+
+
+.khung-hinh-s5,
+.khung-hinh-s6,
+.khung-hinh-s7,
+.khung-hinh-s8,
+.khung-hinh-s9,
+.khung-hinh-s10,
+.khung-hinh-s11,
+.khung-hinh-s12,
+.khung-hinh-s13,
+.khung-hinh-s14,
+.khung-hinh-s15,
+.khung-hinh-s16,
+.khung-hinh-s17,
+.khung-hinh-s18,
+.khung-hinh-s19,
+.khung-hinh-s20 {
     height: calc(100% - 10px);
     border: 2px solid #b22222;
     border-radius: 10px;
-    width: 100%; 
+    width: 40%; 
     background-image: url('images/0.jpg');
     background-size: cover;
     flex-direction: row;
+    display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .popup {
     position: fixed;
@@ -221,16 +396,16 @@ body {
     padding: 20px; /* Thêm một chút padding nếu cần */
 }
 
-.view-meaning-button {
+.view-meaning-button-1 {
     background-color: black;
     color: white;
 }
 
-.view-meaning-button:hover {
+.view-meaning-button-1:hover {
     background-color: darkred;
 }
 
-.view-meaning-button.active {
+.view-meaning-button-1.active {
     background-color: darkred;
     color: white;
     border: 2px solid white;
